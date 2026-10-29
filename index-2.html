@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fresh Fruits Rwanda — fresh, delicious fruit delivered with care.">
+  <title>Fresh Fruits Rwanda | Freshness in Every Bite</title>
+  <style>
+    :root{--green:#176b3a;--green2:#2e8b57;--lime:#d9f99d;--cream:#fffaf0;--ink:#203128;--muted:#66736b;--orange:#ffb347}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .topbar{background:var(--green);color:white;text-align:center;padding:8px 14px;font-size:.9rem}
+    header{background:#fffdf7;position:sticky;top:0;z-index:10;box-shadow:0 2px 12px #173b2510}
+    .nav{max-width:1150px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.08rem;color:var(--green)}
+    .logo{display:grid;place-items:center;width:43px;height:43px;border-radius:14px;background:var(--lime);font-size:1.5rem}
+    .navlinks{display:flex;gap:22px;align-items:center;font-weight:700;font-size:.95rem}
+    .navlinks a:hover{color:var(--green2)}
+    .cart{background:var(--green);color:white;border:0;padding:10px 15px;border-radius:999px;font-weight:700;cursor:pointer}
+    .hero{max-width:1150px;margin:auto;padding:55px 22px 64px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:30px}
+    .eyebrow{display:inline-block;color:var(--green);background:#eaf7df;border-radius:999px;padding:7px 13px;font-size:.83rem;font-weight:800}
+    h1{font-size:clamp(2.5rem,5vw,4.8rem);line-height:1.02;letter-spacing:-2px;margin:18px 0}
+    h1 span{color:var(--green2)}
+    .hero p{color:var(--muted);font-size:1.08rem;max-width:520px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 20px;font-weight:800;border:2px solid var(--green);cursor:pointer}
+    .primary{background:var(--green);color:white}.secondary{color:var(--green);background:transparent}
+    .hero-art{min-height:370px;border-radius:36px;background:radial-gradient(circle at 70% 25%,#fff5c4 0 12%,transparent 13%),linear-gradient(145deg,#dff3c6,#a8d995);display:grid;place-items:center;position:relative;overflow:hidden}
+    .fruit-bowl{font-size:clamp(7rem,18vw,13rem);filter:drop-shadow(0 18px 12px #285a2b25);transform:rotate(-8deg)}
+    .floating{position:absolute;background:white;padding:12px 16px;border-radius:18px;box-shadow:0 12px 30px #1c432020;font-weight:800}
+    .float1{top:28px;left:22px}.float2{bottom:28px;right:20px}
+    .section{padding:60px 22px}.section-inner{max-width:1150px;margin:auto}
+    .section-head{text-align:center;margin:0 auto 30px;max-width:650px}
+    .section-head h2{font-size:clamp(2rem,4vw,3rem);margin:8px 0;color:var(--green)}
+    .section-head p{color:var(--muted);margin:0}
+    .benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .benefit{background:white;border:1px solid #edf0e5;border-radius:22px;padding:23px;display:flex;gap:15px;align-items:flex-start}
+    .benefit .emoji{font-size:2rem}.benefit h3{margin:0 0 5px}.benefit p{margin:0;color:var(--muted);font-size:.94rem}
+    .products{background:#f2f8e9}
+    .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .product{background:white;border-radius:24px;overflow:hidden;border:1px solid #e9efdf;transition:transform .2s}
+    .product:hover{transform:translateY(-4px)}
+    .product-art{height:170px;display:grid;place-items:center;font-size:5rem;background:linear-gradient(135deg,#fff8d9,#e8f7d9)}
+    .product-info{padding:17px}
+    .product-info h3{margin:0;font-size:1.1rem}.product-info p{margin:4px 0 13px;color:var(--muted);font-size:.9rem}
+    .product-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px}
+    .price{font-weight:900;color:var(--green);font-size:1.03rem}
+    .add{border:0;background:var(--lime);color:var(--green);border-radius:50%;width:38px;height:38px;font-size:1.4rem;font-weight:900;cursor:pointer}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+    .about-card{border-radius:30px;background:#e6f4d9;padding:35px;text-align:center;font-size:6rem}
+    .about-copy h2{font-size:2.4rem;line-height:1.1;color:var(--green);margin:0 0 15px}
+    .about-copy p{color:var(--muted)}
+    .contact{background:var(--green);color:white}
+    .contact .section-head h2{color:white}.contact .section-head p{color:#e0f0e4}
+    .contact-box{max-width:720px;margin:auto;background:#ffffff12;border:1px solid #ffffff30;border-radius:25px;padding:25px}
+    .contact-box form{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+    input,textarea,select{width:100%;font:inherit;padding:13px 14px;border-radius:12px;border:1px solid #dbe6d9;background:white;color:var(--ink)}
+    textarea{grid-column:1/-1;min-height:100px;resize:vertical}
+    .contact-box button{grid-column:1/-1;background:var(--lime);color:var(--green);border:0;border-radius:999px;padding:14px;font-weight:900;font-size:1rem;cursor:pointer}
+    .form-note{font-size:.86rem;color:#e0f0e4;margin:12px 0 0}
+    footer{padding:22px;text-align:center;color:var(--muted);font-size:.9rem}
+    .cart-panel{position:fixed;right:15px;bottom:15px;z-index:20;background:white;border-radius:20px;padding:16px 18px;box-shadow:0 8px 35px #102b1c30;max-width:calc(100% - 30px);width:330px;display:none}
+    .cart-panel.show{display:block}.cart-panel h3{margin:0 0 8px;color:var(--green)}
+    .cart-items{font-size:.9rem;color:var(--muted);max-height:130px;overflow:auto}
+    .cart-total{font-weight:900;margin:10px 0}
+    .checkout{width:100%;background:var(--green);color:white;border:0;padding:11px;border-radius:999px;font-weight:800;cursor:pointer}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:40px}.hero-art{min-height:300px}.product-grid{grid-template-columns:repeat(2,1fr)}.benefits{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr}.navlinks{gap:12px}.navlinks a:not(.cart){display:none}}
+    @media(max-width:430px){.product-grid{gap:10px}.product-art{height:130px;font-size:4rem}.product-info{padding:12px}.nav{padding:12px 15px}.hero{padding-left:17px;padding-right:17px}.contact-box form{grid-template-columns:1fr}textarea,.contact-box button{grid-column:auto}}
+  </style>
+</head>
+<body>
+  <div class="topbar">🍊 Fresh, colourful fruits for your everyday life — proudly serving Rwanda</div>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#home"><span class="logo">🍍</span><span>Fresh Fruits<br>Rwanda</span></a>
+      <div class="navlinks"><a href="#home">Home</a><a href="#products">Our Fruits</a><a href="#about">About</a><a href="#contact">Contact</a><button class="cart" onclick="toggleCart()">🛒 Cart (<span id="cartCount">0</span>)</button></div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <span class="eyebrow">GOOD FOOD. GOOD MOOD.</span>
+        <h1>Freshness in <span>every bite.</span></h1>
+        <p>Discover delicious, carefully selected fruits for your home, office, or special occasion. Eat fresh, feel great, and enjoy nature’s goodness.</p>
+        <div class="actions"><a class="btn primary" href="#products">Shop fresh fruits →</a><a class="btn secondary" href="#about">Why choose us?</a></div>
+      </div>
+      <div class="hero-art"><div class="floating float1">🌿 Fresh & natural</div><div class="fruit-bowl">🍎🍊🍌</div><div class="floating float2">💚 Goodness in every bite</div></div>
+    </section>
+    <section class="section">
+      <div class="section-inner benefits">
+        <div class="benefit"><span class="emoji">🌱</span><div><h3>Fresh selection</h3><p>We focus on fruit that looks great and tastes delicious.</p></div></div>
+        <div class="benefit"><span class="emoji">🧺</span><div><h3>Picked with care</h3><p>Every order is prepared thoughtfully for your table.</p></div></div>
+        <div class="benefit"><span class="emoji">🚚</span><div><h3>Easy ordering</h3><p>Choose your favourites and contact us to arrange delivery.</p></div></div>
+      </div>
+    </section>
+    <section class="section products" id="products">
+      <div class="section-inner">
+        <div class="section-head"><span class="eyebrow">OUR FRUIT MARKET</span><h2>Pick your favourites</h2><p>Explore our sample fruit selection. Prices below are examples and can be updated for your real business.</p></div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+    <section class="section" id="about">
+      <div class="section-inner about-grid">
+        <div class="about-card">🍉🍍🍇</div>
+        <div class="about-copy"><span class="eyebrow">A FRESH WAY TO SHOP</span><h2>Simple, fresh, and full of goodness.</h2><p>At Fresh Fruits Rwanda, our goal is to make enjoying fruit easy. Whether you are planning a family breakfast, preparing snacks, or sharing a fruit basket, we help you choose a colourful mix of nature’s goodness.</p><p><strong>Our promise:</strong> friendly service, clear communication, and fruit selected with care.</p><a class="btn primary" href="#contact">Ask about an order →</a></div>
+      </div>
+    </section>
+    <section class="section contact" id="contact">
+      <div class="section-inner">
+        <div class="section-head"><span class="eyebrow">LET'S TALK FRUIT</span><h2>Place an enquiry</h2><p>Tell us what you need. This demo prepares an order message you can send through WhatsApp after you add your business number.</p></div>
+        <div class="contact-box">
+          <form id="orderForm">
+            <input id="customerName" placeholder="Your name" required>
+            <input id="customerPhone" placeholder="Your phone number" required>
+            <select id="deliveryArea" required><option value="">Choose delivery area</option><option>Kigali</option><option>Eastern Province</option><option>Northern Province</option><option>Southern Province</option><option>Western Province</option><option>Other / discuss</option></select>
+            <select id="orderType"><option>Home order</option><option>Office order</option><option>Fruit basket / event</option><option>Wholesale enquiry</option></select>
+            <textarea id="customerMessage" placeholder="Which fruits and quantities would you like?"></textarea>
+            <button type="submit">Prepare my order message</button>
+          </form>
+          <p class="form-note" id="formNote">Note: no payment is taken on this demo website. Add your real phone/WhatsApp number before publishing.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> Fresh Fruits Rwanda · Freshness in every bite 🍃</footer>
+  <div class="cart-panel" id="cartPanel"><h3>Your fruit basket</h3><div class="cart-items" id="cartItems">Your basket is empty.</div><div class="cart-total" id="cartTotal">Estimated total: 0 RWF</div><button class="checkout" onclick="prepareCartMessage()">Prepare order message</button></div>
+  <script>
+    const products = [
+      {name:"Sweet Bananas",desc:"Naturally sweet and satisfying",price:1500,unit:"per bunch",emoji:"🍌"},
+      {name:"Juicy Oranges",desc:"Bright, juicy citrus goodness",price:2500,unit:"per kg",emoji:"🍊"},
+      {name:"Fresh Apples",desc:"Crisp, colourful and delicious",price:3500,unit:"per kg",emoji:"🍎"},
+      {name:"Ripe Pineapple",desc:"Tropical flavour for sharing",price:1800,unit:"each",emoji:"🍍"},
+      {name:"Sweet Mangoes",desc:"A sunny, fruity favourite",price:2000,unit:"per kg",emoji:"🥭"},
+      {name:"Watermelon",desc:"Refreshing and perfect to share",price:3000,unit:"each",emoji:"🍉"},
+      {name:"Fresh Avocados",desc:"Creamy goodness for meals",price:2200,unit:"per kg",emoji:"🥑"},
+      {name:"Grapes",desc:"A tasty snack for any time",price:5000,unit:"per pack",emoji:"🍇"}
+    ];
+    const basket = {};
+    const fmt = n => n.toLocaleString("en-RW") + " RWF";
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("productGrid").innerHTML = products.map((p,i)=>`
+      <article class="product"><div class="product-art">${p.emoji}</div><div class="product-info"><h3>${p.name}</h3><p>${p.desc}</p><div class="product-bottom"><div><div class="price">${fmt(p.price)}</div><small>${p.unit}</small></div><button class="add" aria-label="Add ${p.name} to basket" onclick="addToCart(${i})">+</button></div></div></article>`).join("");
+    function addToCart(i){basket[i]=(basket[i]||0)+1;updateCart();document.getElementById("cartPanel").classList.add("show")}
+    function updateCart(){
+      const count=Object.values(basket).reduce((a,b)=>a+b,0);
+      const total=Object.entries(basket).reduce((sum,[i,q])=>sum+products[i].price*q,0);
+      document.getElementById("cartCount").textContent=count;
+      document.getElementById("cartItems").innerHTML=count?Object.entries(basket).map(([i,q])=>`${products[i].emoji} ${products[i].name} × ${q} — ${fmt(products[i].price*q)}`).join("<br>"):"Your basket is empty.";
+      document.getElementById("cartTotal").textContent="Estimated total: "+fmt(total);
+    }
+    function toggleCart(){document.getElementById("cartPanel").classList.toggle("show")}
+    function prepareCartMessage(){
+      const items=Object.entries(basket).map(([i,q])=>`${products[i].name} x ${q}`).join(", ");
+      if(!items){alert("Please add a fruit to your basket first.");return}
+      const msg=`Hello Fresh Fruits Rwanda! I would like to order: ${items}. Estimated total: ${document.getElementById("cartTotal").textContent.replace("Estimated total: ","")}. Please confirm availability and delivery.`;
+      document.getElementById("customerMessage").value=msg;
+      document.getElementById("contact").scrollIntoView({behavior:"smooth"});
+    }
+    document.getElementById("orderForm").addEventListener("submit",function(e){
+      e.preventDefault();
+      const name=document.getElementById("customerName").value.trim();
+      const phone=document.getElementById("customerPhone").value.trim();
+      const area=document.getElementById("deliveryArea").value;
+      const type=document.getElementById("orderType").value;
+      const message=document.getElementById("customerMessage").value.trim();
+      const text=`Hello Fresh Fruits Rwanda!%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AArea: ${encodeURIComponent(area)}%0AOrder type: ${encodeURIComponent(type)}%0ARequest: ${encodeURIComponent(message||"Please share today's available fruits and prices.")}`;
+      document.getElementById("formNote").textContent="Your message is ready. To send it automatically, the website owner must add a real WhatsApp business number to the site. For now, please contact the owner directly.";
+      alert("Thank you, "+name+"! Your enquiry has been prepared. This demo does not yet send orders to a business account.");
+    });
+  </script>
+</body>
+</html>
